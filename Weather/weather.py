@@ -1,7 +1,7 @@
 from contextlib import nullcontext
 import requests
 
-API_KEY = "89cb9120c3fcc2d343a82a8d7141fc5d"
+API_KEY = "API_KEY"
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
     
