@@ -5,8 +5,7 @@ These projectes are for my own learning. These projects are for educational purp
 I do not have much free time, so the advancement of any project will be slow. 
 
 
-## Port Scanner 
-### (NEW 11/12/2022)
+## Port Scanner (NEW 11/12/2022)
 -----
 
 ### Overview
