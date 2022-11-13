@@ -1,9 +1,33 @@
 # Coding Project - Readme
 
-This file is a general outline of each project, resources associated with each, and goals with each project. 
+This file provides a general outline of each project, associated resources, and origional goals plus ideas looking ahead. 
 These projectes are for my own learning. These projects are for educational purposes only. None of these projects should be used in illegal activity.
 I do not have much free time, so the advancement of any project will be slow. 
 
+
+## Port Scanner (NEW 11/12/2022)
+-----
+
+### Overview
+
+I found this project as a quick project that I could easily expand upon. This started with just identifiying if ports we're open on a single host. 
+
+### Goals
+
+- Make my own tool for cyber security
+- Work with importing library and working with them in code.
+
+
+### Looking Forward
+
+- I have set up options to be passed into the program. Ironing those out, to make it more like an NMAP functionality
+- Find ways to speed up scanning (Current scan rate is slow)
+- Allow IP range to be scanned, and set up predefined port ranges to scan.
+- Add additional functionality
+
+### Resources 
+
+[Write a port scanner in Python in 5 minutes](https://www.youtube.com/watch?v=t9EX2RAUoTU&ab_channel=DavidBombal)
 
 
 ## Keylogger 
