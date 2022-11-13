@@ -5,7 +5,8 @@ These projectes are for my own learning. These projects are for educational purp
 I do not have much free time, so the advancement of any project will be slow. 
 
 
-## Port Scanner (NEW 11/12/2022)
+## Port Scanner 
+### (NEW 11/12/2022)
 -----
 
 ### Overview
@@ -15,8 +16,8 @@ I found this project as a quick project that I could easily expand upon. This st
 ### Goals
 
 - Make my own tool for cyber security
-- Work with importing library and working with them in code.
-
+- Work with importing libraries and working with them in code.
+- Gain knowledge in backend socket connections
 
 ### Looking Forward
 
