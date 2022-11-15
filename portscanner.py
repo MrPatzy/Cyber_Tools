@@ -2,39 +2,80 @@ import socket
 import subprocess
 import sys
 import getopt
+import argparse
 from datetime import datetime
 
 #Blank your screen
 subprocess.call('clear', shell=True)
 
-argumentList = sys.argv[1:]
+#argumentList = sys.argv[1:]
 
 #Options
-options = "hr:o:"
+#options = "hr:o:"
 
 #long Options
-longOptions = ["help", "range=", "output="]
+#longOptions = ["help", "range=", "output="]
 
-outputFile = None
+#outputFile = None
 
-try:
+parser = argparse.ArgumentParser(prog='portscanner', description="Home grown port scanner.")
+
+#IP Address
+parser.add_argument('IP Address', 
+                    metavar='IP',
+                    help='IP address, IP range, or CIDR range to be scanned.',
+                    nargs='+')
+
+#Output Flag
+parser.add_argument('-o', '--output',
+                    help='File name to write output to',
+                    nargs=1,
+                    type=str,
+                    dest='ofile')
+
+#Verbosity Flag
+parser.add_argument('-v', '--verbose',
+                    action='count',
+                    default=0,
+                    help='Increases Verbosity. Max level 5.',
+                    dest='verbose')
+
+#Selecting Port Range
+parser.add_argument('-r', '--range',
+                    nargs=2, 
+                    default=[1-5000],
+                    type=int,
+                    help='Define the range of ports to scan. Default is 1-5000 \n If you need to scan specific ports, see the -sp option',
+                    dest='range')
+
+#Scan Specific Ports
+parser.add_argument('-sp', '--s.ports'
+                    nargs='+'
+                    type=int,
+                    help='Choose specific ports to scan. ',
+                    dest='s.port')                    
+
+
+
+
+#try:
     #Parsing Arguments
-    arguments, values = getopt.getopt(argumentList, options, longOptions)
+ #   arguments, values = getopt.getopt(argumentList, options, longOptions)
 
     #checking each argument
-    for currentArgument, currentValue in arguments:
-        if currentArgument in ("-h", "--help"):
-            print ("Displaying Help")
-            sys.exit()
-        elif currentArgument in ("-r", "--range"):
-            print (("Port Range Selected (% s)") % currentValue)
-        elif currentArgument in ("-o", "--output"):
-            print (("Output file set as %s") % currentValue)
-            outputFile = currentValue
+  #  for currentArgument, currentValue in arguments:
+   #     if currentArgument in ("-h", "--help"):
+    #        print ("Displaying Help")
+     #       sys.exit()
+      #  elif currentArgument in ("-r", "--range"):
+       #     print (("Port Range Selected (% s)") % currentValue)
+        #elif currentArgument in ("-o", "--output"):
+         #   print (("Output file set as %s") % currentValue)
+          #  outputFile = currentValue
 
-except getopt.error as err:
-    #output error, and return with an error code
-    print (str(err))
+#except getopt.error as err:
+ #   #output error, and return with an error code
+  #  print (str(err))
 
 #Ask for input
 
